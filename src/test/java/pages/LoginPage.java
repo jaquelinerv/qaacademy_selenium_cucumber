@@ -12,23 +12,27 @@ public class LoginPage {
     String BOTAOACESSAR = "//button[contains(text(),'Acessar')]";
     String BOTAOREQUISITOS = "//a[contains(text(),'Conheça nossos requisitos')]";
 
-    public LoginPage(WebDriver driverParametro){
+    String SENHAINVALIDA = "//p[@id='modalText']";
+
+    public LoginPage(WebDriver driverParametro) {
         this.driver = driverParametro;
     }
 
-    public void preencheLoginEmail(String email){
+    public void preencheLoginEmail(String email) {
         driver.findElement(By.xpath(LOGINEMAIL)).sendKeys(email);
     }
 
-    public void preencheSenha(String senha){
+    public void preencheSenha(String senha) {
         driver.findElement(By.xpath(SENHA)).sendKeys(senha);
     }
 
-    public void clicarBotaoAcessar(){
+    public void clicarBotaoAcessar() {
         driver.findElement(By.xpath(BOTAOACESSAR)).click();
     }
 
-    public void clicarBotaoRequisitos(){
+    public void clicarBotaoRequisitos() {
         driver.findElement(By.xpath(BOTAOREQUISITOS)).click();
     }
+
+
 }

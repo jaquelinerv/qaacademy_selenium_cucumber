@@ -51,7 +51,7 @@ public class CadastroPage {
     }
 
     public void clicaBotaoFecharContaCriada(){
-        WebElement btnFechar = new WebDriverWait(driver, 1000)
+        WebElement btnFechar = new WebDriverWait(driver, 5000)
                 .until(ExpectedConditions.elementToBeClickable(By.xpath(BOTAOFECHARCADASTROSUCESSO)));
         driver.findElement(By.xpath(BOTAOFECHARCADASTROSUCESSO)).click();
     }
